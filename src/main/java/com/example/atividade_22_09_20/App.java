@@ -5,17 +5,18 @@ import javax.swing.*;
 public class App {
     public static void simulador() {
         Elevador elevador = new Elevador(4, 12);
-        int opcao = 0;
+        int opcao;
         do {
             opcao = Integer.parseInt(JOptionPane.showInputDialog(
-                    "MENU PRINCIPAL\n"
-                            + "1 - Entrar 1 pessoa.\n"
-                            + "2 - Sair 1 pessoa\n"
-                            + "3 - Subir 1 andar\n"
-                            + "4 - Descer 1 andar\n"
-                            + "5 - Exibir Status do Elevador\n"
-                            + "6 - Sair\n"
-                            + "DIGITE ABAIXO A OPÇÃO DESEJADA:"
+                    """
+                            MENU PRINCIPAL
+                            1 - Entrar 1 pessoa.
+                            2 - Sair 1 pessoa
+                            3 - Subir 1 andar
+                            4 - Descer 1 andar
+                            5 - Exibir Status do Elevador
+                            6 - Sair
+                            DIGITE ABAIXO A OPÇÃO DESEJADA:"""
             ));
             switch (opcao) {
                 case 1:
@@ -40,7 +41,6 @@ public class App {
                     break;
                 case 5:
                     JOptionPane.showMessageDialog(null, elevador.exibir());
-                    ;
                     break;
                 case 6:
                     break;

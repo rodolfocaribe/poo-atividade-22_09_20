@@ -1,7 +1,5 @@
 package com.example.atividade_22_09_20;
 
-import javax.swing.JOptionPane;
-
 public class Elevador {
     public int getAndarAtual() {
         return andarAtual;
