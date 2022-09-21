@@ -35,27 +35,27 @@ public class Elevador {
         this.pessoasDentro = pessoasDentro;
     }
 
-    private int andarAtual = 0;
-    private int totalAndares = 12;
-    private int capacidadePessoas = 4;
-    private int pessoasDentro = 0;
+    private int andarAtual;
+    private int totalAndares;
+    private int capacidadePessoas;
+    private int pessoasDentro;
 
-    public Elevador(int capacidadePessoas, int andarAtual) {
+    public Elevador(int capacidadePessoas, int totalAndares) {
         this.capacidadePessoas = capacidadePessoas;
-        this.andarAtual = andarAtual;
+        this.totalAndares = totalAndares;
     }
 
     public boolean entrar() {
-        if (capacidadePessoas < 4) {
-            capacidadePessoas++;
+        if (pessoasDentro < 4) {
+            pessoasDentro++;
             return true;
         }
         return false;
     }
 
     public boolean sair() {
-        if (capacidadePessoas > 0) {
-            capacidadePessoas--;
+        if (pessoasDentro > 0) {
+            pessoasDentro--;
             return true;
         }
         return false;
@@ -77,8 +77,8 @@ public class Elevador {
         return false;
     }
 
-    public void exibir() {
-        JOptionPane.showMessageDialog(null, "Bem vindo ao Elevator Controller!\nEste prédio possui " + totalAndares + " andares.\nA capacidade deste elevador é de " + capacidadePessoas + " pessoas.\nNeste momento o elevador está com " + pessoasDentro + " pessoas.\nO elevador está no " + andarAtual + " andar.");
+    public String exibir() {
+        return "Bem vindo ao Elevator Controller!\nEste prédio possui " + totalAndares + " andares.\nA capacidade deste elevador é de " + capacidadePessoas + " pessoas.\nNeste momento o elevador está com " + pessoasDentro + " pessoas.\nO elevador está no " + andarAtual + " andar.";
     }
 
 }
